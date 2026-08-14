@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyMate AI</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#0b1020;
+  color:white;
+  min-height:100vh;
+}
+
+.header{
+  padding:28px 20px 20px;
+  background:linear-gradient(135deg,#172554,#312e81);
+  border-radius:0 0 28px 28px;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:bold;
+}
+
+.logo span{
+  color:#60a5fa;
+}
+
+.subtitle{
+  margin-top:8px;
+  color:#cbd5e1;
+}
+
+.container{
+  padding:20px;
+  max-width:700px;
+  margin:auto;
+}
+
+.search{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:14px;
+  margin:5px 0 22px;
+  background:#172033;
+  color:white;
+  font-size:15px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.card{
+  background:#151d31;
+  padding:20px 15px;
+  border-radius:20px;
+  border:1px solid #26334f;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.card:active{
+  transform:scale(.96);
+}
+
+.icon{
+  font-size:32px;
+  margin-bottom:12px;
+}
+
+.card h3{
+  font-size:17px;
+  margin-bottom:6px;
+}
+
+.card p{
+  font-size:12px;
+  color:#94a3b8;
+}
+
+.progress{
+  margin-top:20px;
+  background:#151d31;
+  padding:20px;
+  border-radius:20px;
+}
+
+.progress-bar{
+  height:10px;
+  background:#26334f;
+  border-radius:10px;
+  margin-top:12px;
+  overflow:hidden;
+}
+
+.progress-fill{
+  width:65%;
+  height:100%;
+  background:#60a5fa;
+}
+
+button{
+  width:100%;
+  margin-top:15px;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:#2563eb;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+}
+
+.footer{
+  text-align:center;
+  color:#64748b;
+  font-size:12px;
+  padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="logo">📚 StudyMate <span>AI</span></div>
+  <div class="subtitle">Your smart study companion</div>
+</div>
+
+<div class="container">
+
+<input class="search" id="search"
+placeholder="🔎 Search anything...">
+
+<div class="grid">
+
+<div class="card" onclick="openFeature('AI Study Helper')">
+<div class="icon">🤖</div>
+<h3>AI Study Helper</h3>
+<p>Ask questions and learn easily</p>
+</div>
+
+<div class="card" onclick="openFeature('Learn English')">
+<div class="icon">🇬🇧</div>
+<h3>Learn English</h3>
+<p>Vocabulary & grammar practice</p>
+</div>
+
+<div class="card" onclick="openFeature('MCQs & Quiz')">
+<div class="icon">📝</div>
+<h3>MCQs & Quiz</h3>
+<p>Test your knowledge</p>
+</div>
+
+<div class="card" onclick="openFeature('Notes')">
+<div class="icon">📚</div>
+<h3>My Notes</h3>
+<p>Save your study notes</p>
+</div>
+
+<div class="card" onclick="openFeature('Speaking Practice')">
+<div class="icon">🗣️</div>
+<h3>Speaking Practice</h3>
+<p>Improve your English speaking</p>
+</div>
+
+<div class="card" onclick="openFeature('Progress')">
+<div class="icon">📊</div>
+<h3>My Progress</h3>
+<p>Track your learning</p>
+</div>
+
+</div>
+
+<div class="progress">
+<h3>🎯 Today's Progress</h3>
+<p style="color:#94a3b8;margin-top:8px;">
+You are doing great! Keep learning every day.
+</p>
+
+<div class="progress-bar">
+<div class="progress-fill"></div>
+</div>
+
+<button onclick="startLearning()">Start Learning 🚀</button>
+</div>
+
+</div>
+
+<div class="footer">
+StudyMate AI • Learn Smarter Every Day
+</div>
+
+<script>
+
+function openFeature(name){
+  alert(name + " will be available in the next version 🚀");
+}
+
+function startLearning(){
+  alert("Great! Your learning journey starts now 📚");
+}
+
+document.getElementById("search").addEventListener("input",function(){
+  console.log("Searching:",this.value);
+});
+
+</script>
+
+</body>
+  </html>
